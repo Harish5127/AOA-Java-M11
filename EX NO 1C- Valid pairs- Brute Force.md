@@ -1,5 +1,6 @@
 
 # EX 1C Valid Pairs using Brute Force Approach
+
 ## AIM:
 To write a Java program to for given constraints.
 Given an integer array nums and an integer k, return the number of pairs (i, j) where i < j such that |nums[i] - nums[j]| == k.
@@ -10,42 +11,55 @@ x if x >= 0.
 -x if x < 0.
 
 ## Algorithm
-1. Start the program and import the `Scanner` class to take user input.
-2. Read the number of elements `n` and then input the array elements.
-3. Read the integer value `k` representing the required absolute difference.
-4. Use nested loops to compare each pair `(i, j)` where `i < j` and check if `|nums[i] - nums[j]| == k`.
-5. Count and display the total number of valid pairs that satisfy the condition.
+
+1. Start the Program
+
+2. Input values
+
+   - Read integer n (size of array)
+   - Read n elements into array nums
+   - Read integer k (required difference)
+
+3. Initialize variables
+   - Set count = 0
+   - Store array length as n
+
+4. Check all pairs
+
+ - Use two loops:
+    - Outer loop: i = 0 to n-1
+    - Inner loop: j = i+1 to n-1
+ - For each pair (i, j):
+    - Calculate |nums[i] - nums[j]|
+    - If result equals k, increment count
+
+5. Output result and Stop
+
+    - Print the value of count
+    - End the program
 
 
 ## Program:
-```
+```java
 /*
-Program to implement Reverse a String
+Program to count pairs with a given absolute difference k
 Developed by: Harish R
 Register Number: 212224230085
 */
-```
-```java
 import java.util.Scanner;
 public class CountPairsWithDifference {
     public static int countKDifference(int[] nums, int k) {
         int count = 0;
-        int len=nums.length;
-        for (int i=0;i<len-1;i++)
-        {
-            for (int j=i+1;j<len;j++)
-            {
-                if (Math.abs(nums[i]-nums[j])==k)
-                {
+        int n = nums.length;
+
+        for (int i = 0; i < n; i++) {
+            for (int j = i + 1; j < n; j++) {
+                if (Math.abs(nums[i] - nums[j]) == k) {
                     count++;
                 }
             }
         }
         return count;
-        
-        
-        
-        
     }
     public static void main(String[] args) {
         Scanner sc = new Scanner(System.in);
@@ -60,13 +74,10 @@ public class CountPairsWithDifference {
         sc.close();
     }
 }
-
 ```
 
 ## Output:
-<img width="401" height="298" alt="image" src="https://github.com/user-attachments/assets/6bd79e05-b0ef-4486-aa49-e297863f61bd" />
-
-
+<img width="567" height="1008" alt="image" src="https://github.com/user-attachments/assets/2327017c-baa9-413b-9031-49b2544502df" />
 
 ## Result:
 The program successfully implemented and the expected output is verified.
