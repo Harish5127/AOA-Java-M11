@@ -53,7 +53,8 @@ public class PrintNumbers {
 ```
 
 ## Output:
-![alt text](11.1a.png)
+
+<img width="704" height="764" alt="image" src="https://github.com/user-attachments/assets/12d7c851-44e3-4afe-a25d-4f408adda4dc" />
 
 ## Result:
 The program successfully print all the numbers from 1 to N. 
